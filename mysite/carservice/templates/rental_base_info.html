@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 text-center bg-image text-white"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 100vh;
+    "
+  >
+        {% for object in rentalbases %}
+<div class="text-center" style="font-size:35px;">
+    <h1 style="font-size:50px; color:#eea910;">{{ object.name }}</h1>
+    <div class="container container2">
+            <img src="{{ object.logo.url }}"  alt="logo"/>
+        </div>
+    <p>Number of employees: {{ object.number_of_employees }}</p>
+    <p>Address: {{ object.address.country }} </p>
+            <p>{{ object.address.street }}</p>
+            <p> {{ object.address.city }} {{ object.address.postal_code }}</p>
+    <p>Phone: {{ object.phone }}</p>
+    {% endfor %}
+</div>
+    </div>
+    </header>
+{% endblock %}

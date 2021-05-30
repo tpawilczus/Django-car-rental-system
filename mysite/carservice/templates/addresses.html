@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 text-center bg-image text-white"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 100vh;
+    "
+  >
+<h1 style="color:black;">All addresses</h1>
+    {% for address in addresses %}
+        <p></p>
+    <tr>
+						<td><a class="btn btn-sm btn-success" href="address_edit/{{address.id}}" >Edit</a></td>
+						<td>{{address}}</td>
+            <td><a class="btn btn-sm btn-danger" href="address_delete/{{address.id}}" >Delete</a></td>
+    </tr>
+    {% endfor %}
+    </div>
+    </header>
+{% endblock %}

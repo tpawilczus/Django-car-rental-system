@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 bg-image text-white"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 100vh;
+    "
+  >
+
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary btn-block" name="" id="" value="Sign Up" />
+  </form>
+    </div>
+    </header>
+{% endblock %}

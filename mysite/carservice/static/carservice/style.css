@@ -1,0 +1,21 @@
+.container {
+    width: 450px;
+    height: 250px;
+}
+
+/* Resize images */
+.container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 19px solid #ddd;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container2 {
+    width: 300px;
+    height: 250px;
+}

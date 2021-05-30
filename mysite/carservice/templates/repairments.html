@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 100vh;
+    "
+  >
+<h1>All repairments</h1>
+    {% for repairment in repairments %}
+        <p></p>
+    <tr>
+						<td><a class="btn btn-sm btn-success" href="repairment_edit/{{repairment.id}}" >Edit</a></td>
+						<td>{{repairment}}</td>
+            <td><a class="btn btn-sm btn-danger" href="repairment_delete/{{repairment.id}}" >Delete</a></td>
+					</tr>
+    {% endfor %}
+    </div>
+    </header>
+{% endblock %}

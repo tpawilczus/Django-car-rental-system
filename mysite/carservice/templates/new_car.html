@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 text-center bg-image text-white"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 100vh;
+    "
+  >
+    <div class="text-center" style="font-size:25px; font-family:'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace">
+<h1 style="font-size:50px; color:black;">Add new car</h1>
+<form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <div class="d-grid gap-2 col-1 mx-auto">
+    <input type="submit" class="btn btn-primary btn-block" name="" id="" value="Add" />
+    </div>
+</form>
+    </div>
+    </div>
+    </header>
+
+{% endblock %}

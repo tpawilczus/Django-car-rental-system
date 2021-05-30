@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 text-center bg-image text-white"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 100vh;
+    "
+  >
+<h1 style="color:black;">All orders</h1>
+    {% for order in orders %}
+        <p></p>
+    <tr>
+						<td><a class="btn btn-sm btn-success" href="order_edit/{{order.id}}" >Edit</a></td>
+						<td>{{order}}</td>
+            <td><a class="btn btn-sm btn-danger" href="order_delete/{{order.id}}" >Delete</a></td>
+					</tr>
+    {% endfor %}
+    </div>
+    </header>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 200vh;
+    "
+  >
+<h1>Available Cars</h1>
+    {% for car in cars %}
+        <div class="container">
+        <a href="{{ car.get_absolute_url }}">
+            <img src="{{ car.image.url }}" alt="car image" class="image"/></a>
+        </div>
+            <a class="link-success" style="font-size:30px;" href="{{ car.get_absolute_url }}">{{ car.car_model }}</a>
+        <p class="text-info" style="font-size:20px;">${{ car.cost_per_day }} / day</p>
+    {% endfor %}
+</div>
+    </header>
+{% endblock %}

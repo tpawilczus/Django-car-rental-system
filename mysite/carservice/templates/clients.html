@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 text-center bg-image text-white"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 100vh;
+    "
+  >
+<h1 style="color:black;">All clients</h1>
+    {% for client in clients %}
+        <p></p>
+    <tr>
+						<td><a class="btn btn-sm btn-success" href="client_edit/{{client.id}}" >Edit</a></td>
+						<td>{{client}}</td>
+            <td><a class="btn btn-sm btn-danger" href="client_delete/{{client.id}}" >Delete</a></td>
+					</tr>
+    {% endfor %}
+    </div>
+    </header>
+{% endblock %}

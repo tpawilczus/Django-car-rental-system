@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <header>
+    <div
+    class="p-5 text-center bg-image text-white"
+    style="
+      background-image: url('../../media/logo/tlo.jpg');
+      height: 100vh;
+    "
+  >
+    <div class="text-center" style="font-size:30px;">
+<h1 style="font-size:50px; color:black;">Pick a car to repair</h1>
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <div class="d-grid gap-2 col-1 mx-auto">
+    <input type="submit" class="btn btn-primary btn-block" name="" id="" value="Add" />
+    </div>
+</form>
+    </div>
+    </div>
+    </header>
+{% endblock %}
